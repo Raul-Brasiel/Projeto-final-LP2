@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Katibeh&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+.mySlides {
+  display: flex;
+  justify-content: center;
+}
+img {
+  max-width: 400px;
+  vertical-align: middle;
+  margin-left: 20%;
+  padding-top: 3%;
+}
+
+.slideshow-container {
+  position: relative;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next{
+  right: 0;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(66, 63, 63, 0.8);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+
+h1 {
+  text-align: center;
+  color: #000000;
+  font-size: 50px;
+  font-family: "Dancing Script";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 115px;
+  margin-top: 5%;
+}
+
+body {
+  background-color: #deb887;
+}
+
+p {
+  color: white;
+  font-family: Poppins, sans-serif;
+}
+
+h2 {
+  font-family: "Katibeh";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 96px;
+  color: #000000;
+  padding-left: 5%;
+  margin-top: 3%;
+}
+
+#slider {
+  background-color: #000000;
+  position: relative;
+  left: 0;
+  right: 0;
+}
+
+.nome-do-prato{
+  color: white;
+  text-align: center;
+  line-height: 70%;
+}
+
+li{
+  color: white;
+}
+.sobre-prato{
+  margin: 0px 50px;
+  width: 400px;
+  padding-top: 3%;
+}
+
+.sobre-prato ul{
+  padding-top: 10%;
+}
+.sobre-prato ul li{
+  line-height: 200%;
+}
+.fa-solid{
+  background-color: #deb887;
+  cursor: pointer;
+  position: absolute;
+  right: 5%;
+  bottom: 0;
+  height: 60px;
+  width: 60px;
+  font-size: 40px;
+  border-radius: 50px;
+  text-align: center;
+  padding-top: 1%;
+}
+i{
+  margin-bottom: 3%;
+}
+
+.fa-solid:hover{
+  background-color: #dedb87;
+  transform: scale(1.2);
+}
+
+.slider-bebidas .sobre-prato{
+  width: 700px;
+}
+
+/*Tablet*/
+@media screen and (max-width: 900px) {
+  .fa-solid{
+    padding-top: 2%;
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+    bottom: 0;
+  }
+  img{
+    max-width: 300px;
+    max-height: 300px;
+
+  }
+  .nome-do-prato{
+    font-size: 200%;
+    line-height: 100%;
+  }
+  li{
+    font-size: 80%;
+  }
+  h2{
+    font-size: 300%;
+  }
+}
+
+/*Celular*/
+@media screen and (max-width: 600px) {
+  .fa-solid{
+    margin-bottom: 5%;
+    margin-right: 40%;
+  }
+  h2{
+    font-size: 250%;
+    margin-top: 20%;
+    line-height: 90%;
+  }
+  h1{
+    text-align: center;
+    font-size: 500%;
+  }
+  .mySlides{
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .dot{
+    margin-top: 10%;
+    height: 10px;
+    width: 10px;
+  }
+  img{
+    padding-right: 15%;
+    max-width: 250px;
+    max-height: 250px;
+    padding-top: 6%;
+  }
+  .nome-do-prato{
+    line-height: 100%;
+  }
+  li{
+    font-size: 100%;
+  }
+  ul{
+    padding-left: 5%;
+  }
+}
