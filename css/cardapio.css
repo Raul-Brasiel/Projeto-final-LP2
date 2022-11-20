@@ -154,7 +154,7 @@ li{
   font-size: 40px;
   border-radius: 50px;
   text-align: center;
-  padding-top: 1%;
+  padding-top: 10px;
 }
 i{
   margin-bottom: 3%;
@@ -172,7 +172,6 @@ i{
 /*Tablet*/
 @media screen and (max-width: 900px) {
   .fa-solid{
-    padding-top: 2%;
     height: 50px;
     width: 50px;
     font-size: 30px;
