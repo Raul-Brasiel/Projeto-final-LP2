@@ -109,6 +109,9 @@ div.textSection-container .opposite p {
   h1 {
     margin: 10px;
   }
+  footer{
+    margin-top: 50%;
+  }
 }
 
 footer{
