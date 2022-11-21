@@ -374,11 +374,6 @@ form .btn button:hover{
   }
 }
 
-
-
-
-
-
 footer{
   background-color: #000000;
   padding: 50px 0;
@@ -457,6 +452,14 @@ footer{
 .footer-col .form-sub input::placeholder{
   color: white;
 }
+#linha-footer{
+  background-color: #deb887;
+  border: 0.5px solid #deb887;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 10%;
+}
 
 /* Responsivo */
 @media screen and (max-width: 1000px) {
@@ -475,13 +478,11 @@ footer{
   footer{
       margin-top: 270%;
   }
-}
-
-#linha-footer{
-  background-color: #deb887;
-  border: 0.5px solid #deb887;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 10%;
+  .container{
+    max-width: 75%;
+    margin-left: 13%;
+  }
+  .star-widget label{
+    max-width: 20%;
+  }
 }
