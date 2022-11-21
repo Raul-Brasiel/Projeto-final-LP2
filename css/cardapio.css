@@ -156,6 +156,9 @@ li{
   text-align: center;
   padding-top: 10px;
 }
+#slider a{
+  text-decoration: none;
+}
 i{
   margin-bottom: 3%;
 }
