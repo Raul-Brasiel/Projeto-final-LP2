@@ -33,7 +33,7 @@ button {
 }
 
 body{
-    background-color: #d0be74;
+    background-color: #deb887;
 }
 main{
     display: flex;
@@ -74,7 +74,7 @@ main{
   }
   
   .select-box .options-container {
-    background: #d0be74;
+    background: #deb887;
     color: #10a335;
     max-height: 0;
     width: 100%;
@@ -87,7 +87,7 @@ main{
   }
   
   .selected {
-    background: #d0be74;
+    background: #deb887;
     border-radius: 8px;
     margin-bottom: 8px;
     color: black;
@@ -128,7 +128,7 @@ main{
   
   .select-box .options-container::-webkit-scrollbar {
     width: 8px;
-    background: #0d141f;
+    background: #deb887;
     border-radius: 0 8px 8px 0;
   }
   
