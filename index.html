@@ -1,226 +1,487 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bon Appetit</title>
-    <link rel="stylesheet" href="css/rodape.css">
-    <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/style-slides.css">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
-</head>
-<body>
-    <nav id="menu">
-      <div class="logo">
-        <img src="imagens/logo marca advocacia.png" alt="logo" width="90" height="90">
-      </div>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 
-        <ul id="botoesMenu">
-          <a href="index.html" class="button-menu">
-              <li>
-                  <p>Página Inicial</p>
-              </li>
-          </a>
-          <a href="cardapio.html" class="button-menu">
-              <li>
-                  <p>Cárdapio</p>
-              </li>
-          </a>
-          <a href="celebridades.html" class="button-menu">
-              <li>
-                  <p>Celebridades</p>
-              </li>
-          </a>
-          <a href="funcionarios.html" class="button-menu">
-              <li>
-                  <p>Funcionários</p>
-              </li>
-          </a>
-          <a href="eventos.html" class="button-menu">
-              <li>
-                  <p>Eventos</p>
-              </li>
-          </a>
-          <a href="historia.html" class="button-menu">
-              <li>
-                  <p>História</p>
-              </li>
-          </a>
-          <a href="ambiente.html" class="button-menu">
-              <li>
-                  <p>Ambiente</p>
-              </li>
-          </a>
-          <a href="formulario.html" class="button-menu">
-              <li>
-                  <p>Contatos</p>
-              </li>
-          </a>
-      </ul>
+body {
+  margin: 0;
+  background-color: black;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+.mySlides {
+  display: none;
+}
+img {
+  vertical-align: middle;
+  width: 100%;
+}
 
-    </nav>
-    
-  <div class="slideshow-container">
+.slideshow-container {
+  max-width: 1000vh;
+  position: relative;
+  margin: auto;
+}
 
-    <div class="mySlides fade">
-      <img src="imagens/index/propagandahappyhour.png" style="width:100%">
-    </div>
-    
-    <div class="mySlides fade">
-      <img src="imagens/index/propagandanatal.png" style="width:100%">
-    </div>
-    
-    <div class="mySlides fade">
-      <img src="imagens/index/propagandavinhos.png" style="width:100%">
-    </div>
-    
-    <a class="prev" onclick="plusSlides(-1)">❮</a>
-    <a class="next" onclick="plusSlides(1)">❯</a>
-    
-    </div>
-    <br>
-    
-    <div style="text-align:center">
-      <span class="dot" onclick="currentSlide(1)"></span> 
-      <span class="dot" onclick="currentSlide(2)"></span> 
-      <span class="dot" onclick="currentSlide(3)"></span> 
-    </div>
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
 
-  <h1>Bon Appettit</h1>
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
 
-  <section class="row">
-    <div style="flex: 2">
-      <img src="imagens/index/foto1.png" alt="#" />
-    </div>
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
 
-    <div>
-      <h2>CARDÁPIO</h2>
-      <p>
-        Entradas, saladas, sanduíches, carnes, massas e sobremesas especiais.
-        Variedade e sabores que agradam a todos os paladares.
-      </p>
 
-      <a href="cardapio.html">
-          <button>Cardápio</button>
-        </a>
-    </div>
-  </section>
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
 
-  <section class="column">
-    <h2>INTRODUÇÃO AO RESTAURANTE</h2>
-    <div class="textSection-container">
-      <p id="text">
-        Considerado o maior e melhor restaurante do Brasil, com especialidade em frutos do mar,
-         o Bon Appetit possui um amplo e variado cardápio, com comidas e bebidas deliciosamente
-          diferenciadas, feitas com ingredientes frescos da mais alta qualidade. Os pratos são 
-          bem servidos e toda essa excelência é apresentada a preços acessíveis. Nossas unidades
-          são amplas, possuem decoração rústica e elegante, oferecendo aos nossos clientes um 
-          ambiente sofisticado e aconchegante. Visite-nos e encante-se!
-      </p>
-      <img
-        id="img2"
-        src="imagens/index/foto2.png"
-        alt="#"
-      />
-    </div>
-  </section>
+.active,
+.dot:hover {
+  background-color: #717171;
+}
 
-  <section class="column">
-    <h2>FEEDBACK E PERGUNTAS FREQUENTES</h2>
-    <div class="container">
-      <div class="star-widget">
-        <input type="radio" name="rate" id="rate-5">
-        <label for="rate-5" class="fas fa-star"></label>
-        <input type="radio" name="rate" id="rate-4">
-        <label for="rate-4" class="fas fa-star"></label>
-        <input type="radio" name="rate" id="rate-3">
-        <label for="rate-3" class="fas fa-star"></label>
-        <input type="radio" name="rate" id="rate-2">
-        <label for="rate-2" class="fas fa-star"></label>
-        <input type="radio" name="rate" id="rate-1">
-        <label for="rate-1" class="fas fa-star"></label>
-        <form action="#">
-          <header></header>
-          <div class="textarea">
-            <textarea cols="30" placeholder="Descreva sua experiência.."></textarea>
-          </div>
-          <div class="btn">
-            <button type="submit">Enviado</button>
-          </div>
-        </form>
-      </div>
-    </div>
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
 
-  <section class="column">
-    <h2>CHEF</h2>
-    <div class="textSection-container">
-      <div style="flex: 3">
-        <img
-          id="img"
-          src="imagens/index/chef.png"
-          alt="#"
-          style="flex: 3"
-        />
-      </div>
-      <div class="textSection-container opposite">
-        <h2>JUNIOR DURSKI</h2>
-        <p>
-          Com formação em Direito, político, madeireiro, empresário e trader,
-          Luiz Renato Durski Junior, ou Junior Durski, como prefere ser chamado,
-          também se considera chef de cozinha desde 1999.
-        </p>
-        <a href="funcionarios.html">
-          <button>Conheça nossa equipe</button>
-        </a>
-      </div>
-    </div>
-  </section>
-      
-      <footer>
-      <div class="container-footer">
 
-        <div id="linha-footer"></div>
+p {
+  color: white;
+  font-size: 3vmin;
+  text-align: center;
+}
 
-          <div class="row-footer">
+h2 {
+  text-align: center;
+  margin: auto;
+  border: none;
+}
 
-              <div class="footer-col">
-                  <ul>
-                      <li><a href="historia.html"> Quem somos </a></li>
-                      <li><a href="politica-de-privacidade.html"> Política de privacidade </a></li>
-                      <li><a href="trabalhe-conosco.html"> Trabalhe conosco </a></li>
-                      <li><a href="formulario.html"> Cidades e franquias </a></li>
-                  </ul>
-              </div>
+button {
+  background-color: #deb887;
+  padding: 2vh;
+  font-size: 2.5vh;
+  border-radius: 1vh;
+  cursor: pointer;
+}
 
-              <div class="footer-col">
-                  <ul>
-                      <li><a href="index.html">Lançamentos</a></li>
-                      <li><a href="index.html">Happy Hour</a></li>
-                      <li><a href="formulario.html">Contatos</a></li>
-                  </ul>
-              </div>
+button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  background-color: rgba(255, 255, 255, 0.2);
+}
 
-              <div class="footer-col">
-                  <ul>
-                      <li><a href="colaboradores.html">Colaboradores do projeto</a></li>
-                  </ul>
-                  <div class="redes-sociais">
-                      <a href="https://twitter.com/home" target="_blank"> <i class="fa-brands fa-twitter"></i> </a>
-                      <a href="https://www.facebook.com/" target="_blank"> <i class="fa-brands fa-facebook-f"></i> </a>
-                      <a href="https://www.whatsapp.com/" target="_blank"> <i class="fa-brands fa-whatsapp"> </i></a>
-                      <a href="https://instagram.com" target="_blank"> <i class="fa-brands fa-instagram"></i> </a>
-                  </div>
-              </div>
+.content {
+  background-color: #606060;
+  width: 100%;
+  height: 100vh;
+}
 
-          </div>
-      </div>
-    </footer>
-      
-  <script src="js/index.js"></script>
-  <script src="js/style-slides.js"></script>
+.img1 {
+  text-align: left;
+  max-width: 500px;
+  max-height: 500px;
+}
 
-</body>
+#img2{
+  max-width: 500px;
+  max-height: 500px;
+}
+h1 {
+  color: #deb887;
+  text-align: center;
+}
+h2 {
+  color: #deb887;
+  font-size: 6vh;
+}
 
-</html>
+section {
+  display: flex;
+
+  margin-block: 4vh;
+}
+
+section.row {
+  justify-content: space-around;
+  align-items: center;
+}
+
+section.row div {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  margin: 2vh;
+
+  flex: 1;
+}
+
+section.column {
+  flex-direction: column;
+}
+
+div.textSection-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+div.textSection-container #text {
+  flex: 2;
+  text-align: justify;
+
+  margin: 2vh;
+}
+
+div.textSection-container #img {
+  flex: 1;
+}
+
+div.textSection-container .opposite {
+    display: flex;
+    flex-direction: column;
+
+    color: black;
+    font-weight: 900;
+
+    justify-content: center;
+    align-items: center;
+
+    flex: 2;
+    background-color: #deb887;
+
+    padding: 2vh;
+}
+
+div.textSection-container .opposite button{
+    background-color: black;
+    color: white;
+}
+
+div.textSection-container .opposite h2 {
+  font-weight: 900;
+  margin: 0;
+  color: black;
+}
+
+div.textSection-container .opposite p {
+  text-align: justify;
+  color: black;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html,body{
+  display: grid;
+  place-items: center;
+  background: #000;
+  margin: 0;
+}
+.container{
+  text-align: center;
+  position: relative;
+  margin-left: 37%;
+  background: #111;
+  border: 1px solid #444;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container .post{
+  display: none;
+}
+.container .text{
+  font-size: 25px;
+  color: #666;
+  font-weight: 500;
+}
+.container .edit{
+  font-size: 16px;
+  color: #666;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+}
+.container .edit:hover{
+  text-decoration: underline;
+}
+.container .star-widget input{
+  display: none;
+}
+.star-widget label{
+  font-size: 40px;
+  color: #444;
+  padding: 10px;
+  float: right;
+  transition: all 0.2s ease;
+}
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label{
+  color: #fd4;
+}
+input:checked ~ label{
+  color: #fd4;
+}
+input#rate-5:checked ~ label{
+  color: #fe7;
+  text-shadow: 0 0 20px #952;
+}
+#rate-1:checked ~ form header:before{
+  content: "Desculpe!";
+}
+#rate-2:checked ~ form header:before{
+  content: "Sinto muito!";
+}
+#rate-3:checked ~ form header:before{
+  content: "Como podemos melhorar?";
+}
+#rate-4:checked ~ form header:before{
+  content: "O que te desagradou?";
+}
+#rate-5:checked ~ form header:before{
+  content: "Feliz que tenha gostado!!";
+}
+.container form{
+  display: none;
+}
+input:checked ~ form{
+  display: block;
+}
+form header{
+  width: 100%;
+  font-size: 25px;
+  color: #fe7;
+  font-weight: 500;
+  margin: 5px 0 20px 0;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+form .textarea{
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+}
+form .textarea textarea{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  color: #eee;
+  border: 1px solid #333;
+  background: #222;
+  padding: 10px;
+  font-size: 17px;
+  resize: none;
+}
+.textarea textarea:focus{
+  border-color: #444;
+}
+form .btn{
+  height: 45px;
+  width: 100%;
+  margin: 15px 0;
+}
+form .btn button{
+  height: 100%;
+  width: 100%;
+  border: 1px solid #444;
+  outline: none;
+  background: #222;
+  color: #999;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+form .btn button:hover{
+  background: #1b1b1b;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  section {
+    flex-direction: column;
+  }
+  div.textSection-container {
+    flex-direction: column;
+  }
+  .container{
+    margin-left: 25%;
+  }
+  #img2{
+    margin-left: 20%;
+  }
+}
+@media screen and (max-width: 600px){
+  .container{
+    margin-left: 20%;
+  }
+  #img2{
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 400px){
+  .container{
+    margin-left: 0;
+  }
+}
+
+
+
+
+
+
+footer{
+  background-color: #000000;
+  padding: 50px 0;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin-top: 90%;
+}
+.footer{
+  max-width: 1400px;
+  margin: auto;
+}
+.row-footer{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-col{
+  width: 25%;
+  padding: 0 15px;
+  margin-left: 7%;
+  margin-top: 2%;
+}
+
+.footer-col ul{
+  list-style: none;
+}
+.footer-col ul li{
+  margin: 10px 0;
+}
+.footer-col ul li a{
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+  color: #cecdcd;
+  padding-left: 10px;
+}
+.footer-col .redes-sociais{
+  margin-top: 30px;
+}
+.footer-col .redes-sociais a{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+  border-radius: 50%;
+  color: white;
+  border: 1px solid white;
+  transition: all 0.5s ease;
+}
+.footer-col .redes-sociais a i{
+  font-size: 20px;
+}
+
+.footer-col .redes-sociais a:hover{
+  color: #415aca;
+  background-color: white;
+}
+.footer-col .form-sub input{
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  outline: none;
+  border: 1px solid white;
+  color: white;
+  background-color: #415aca;
+}
+.footer-col .form-sub input::placeholder{
+  color: white;
+}
+
+/* Responsivo */
+@media screen and (max-width: 1000px) {
+  .footer-col{
+      width: 50%;
+  }
+  footer{
+    margin-top: 180%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer-col{
+      width: 100%;
+  }
+  footer{
+      margin-top: 290%;
+  }
+}
+
+#linha-footer{
+  background-color: #deb887;
+  border: 0.5px solid #deb887;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 10%;
+}
