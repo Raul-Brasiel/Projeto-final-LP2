@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slides</title>
+    <link rel="stylesheet" href="style-slides.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <img src="./img_slides/propagandahappyhour.png" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="./img_slides/propagandanatal.png" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="./img_slides/propagandavinhos.png" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+
+  <h1>Bon Appettit</h1>
+
+  <section class="row">
+    <div style="flex: 2">
+      <img src="/imgs-paginainicial/foto1.png" alt="#" />
+    </div>
+
+    <div>
+      <h2>CARDÁPIO</h2>
+      <p>
+        Entradas, saladas, sanduíches, carnes, massas e sobremesas especiais.
+        Variedade e sabores que agradam a todos os paladares.
+      </p>
+
+      <button><link rel="stylesheet" href="" />Cardápio</button>
+    </div>
+  </section>
+
+  <section class="column">
+    <h2>INTRODUÇÃO AO RESTAURANTE</h2>
+    <div class="textSection-container">
+      <p id="text">
+        Considerado o maior e melhor restaurante do Brasil, com especialidade em frutos do mar,
+         o Bon Appetit possui um amplo e variado cardápio, com comidas e bebidas deliciosamente
+          diferenciadas, feitas com ingredientes frescos da mais alta qualidade. Os pratos são 
+          bem servidos e toda essa excelência é apresentada a preços acessíveis. Nossas unidades
+          são amplas, possuem decoração rústica e elegante, oferecendo aos nossos clientes um 
+          ambiente sofisticado e aconchegante. Visite-nos e encante-se!
+      </p>
+      <img
+        id="img2"
+        src="/imgs-paginainicial/foto2.png"
+        alt="#"
+      />
+    </div>
+  </section>
+
+  <section class="column">
+    <h2>FEEDBACK E PERGUNTAS FREQUENTES</h2>
+    <div class="container">
+      <div class="star-widget">
+        <input type="radio" name="rate" id="rate-5">
+        <label for="rate-5" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-4">
+        <label for="rate-4" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-3">
+        <label for="rate-3" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-2">
+        <label for="rate-2" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-1">
+        <label for="rate-1" class="fas fa-star"></label>
+        <form action="#">
+          <header></header>
+          <div class="textarea">
+            <textarea cols="30" placeholder="Descreva sua experiência.."></textarea>
+          </div>
+          <div class="btn">
+            <button type="submit">Enviado</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  <section class="column">
+    <h2>CHEF</h2>
+    <div class="textSection-container">
+      <div style="flex: 3">
+        <img
+          id="img"
+          src="/imgs-paginainicial/chef.png"
+          alt="#"
+          style="flex: 3"
+        />
+      </div>
+      <div class="textSection-container opposite">
+        <h2>JUNIOR DURSKI</h2>
+        <p>
+          Com formação em Direito, político, madeireiro, empresário e trader,
+          Luiz Renato Durski Junior, ou Junior Durski, como prefere ser chamado,
+          também se considera chef de cozinha desde 1999.
+        </p>
+        <button>Conheça nossa equipe</button>
+      </div>
+    </div>
+  </section>
+  <script src="js.js"></script>
+  <script src="style-slides.js"></script>
+
+</body>
+
+</html>
