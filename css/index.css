@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+body {
+  margin: 0;
+  background-color: black;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+.mySlides {
+  display: none;
+}
+img {
+  vertical-align: middle;
+  width: 100%;
+}
+
+.slideshow-container {
+  max-width: 1000vh;
+  position: relative;
+  margin: auto;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+p {
+  color: white;
+  font-size: 3vmin;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  margin: auto;
+  border: none;
+}
+nav,
+ul {
+  display: flex;
+  flex-direction: row;
+}
+
+li {
+  padding: 0 20px;
+}
+
+button {
+  background-color: #deb887;
+  padding: 2vh;
+  font-size: 2.5vh;
+  border-radius: 1vh;
+  cursor: pointer;
+}
+
+a:hover,
+button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.content {
+  background-color: #606060;
+  width: 100%;
+  height: 100vh;
+}
+
+.img1 {
+  text-align: left;
+  max-width: 500px;
+  max-height: 500px;
+}
+
+#img2{
+  max-width: 500px;
+  max-height: 500px;
+}
+h1 {
+  color: #deb887;
+  text-align: center;
+}
+h2 {
+  color: #deb887;
+  font-size: 6vh;
+}
+
+section {
+  display: flex;
+
+  margin-block: 4vh;
+}
+
+section.row {
+  justify-content: space-around;
+  align-items: center;
+}
+
+section.row div {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  margin: 2vh;
+
+  flex: 1;
+}
+
+section.column {
+  flex-direction: column;
+}
+
+div.textSection-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+div.textSection-container #text {
+  flex: 2;
+  text-align: justify;
+
+  margin: 2vh;
+}
+
+div.textSection-container #img {
+  flex: 1;
+}
+
+div.textSection-container .opposite {
+    display: flex;
+    flex-direction: column;
+
+    color: black;
+    font-weight: 900;
+
+    justify-content: center;
+    align-items: center;
+
+    flex: 2;
+    background-color: #deb887;
+
+    padding: 2vh;
+}
+
+div.textSection-container .opposite button{
+    background-color: black;
+    color: white;
+}
+
+div.textSection-container .opposite h2 {
+  font-weight: 900;
+  margin: 0;
+  color: black;
+}
+
+div.textSection-container .opposite p {
+  text-align: justify;
+  color: black;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html,body{
+  display: grid;
+  place-items: center;
+  background: #000;
+  margin: 0;
+}
+.container{
+  text-align: center;
+  position: relative;
+  margin-left: 30%;
+  background: #111;
+  border: 1px solid #444;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container .post{
+  display: none;
+}
+.container .text{
+  font-size: 25px;
+  color: #666;
+  font-weight: 500;
+}
+.container .edit{
+  font-size: 16px;
+  color: #666;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+}
+.container .edit:hover{
+  text-decoration: underline;
+}
+.container .star-widget input{
+  display: none;
+}
+.star-widget label{
+  font-size: 40px;
+  color: #444;
+  padding: 10px;
+  float: right;
+  transition: all 0.2s ease;
+}
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label{
+  color: #fd4;
+}
+input:checked ~ label{
+  color: #fd4;
+}
+input#rate-5:checked ~ label{
+  color: #fe7;
+  text-shadow: 0 0 20px #952;
+}
+#rate-1:checked ~ form header:before{
+  content: "Desculpe!";
+}
+#rate-2:checked ~ form header:before{
+  content: "Sinto muito!";
+}
+#rate-3:checked ~ form header:before{
+  content: "Como podemos melhorar?";
+}
+#rate-4:checked ~ form header:before{
+  content: "O que te desagradou?";
+}
+#rate-5:checked ~ form header:before{
+  content: "Feliz que tenha gostado!!";
+}
+.container form{
+  display: none;
+}
+input:checked ~ form{
+  display: block;
+}
+form header{
+  width: 100%;
+  font-size: 25px;
+  color: #fe7;
+  font-weight: 500;
+  margin: 5px 0 20px 0;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+form .textarea{
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+}
+form .textarea textarea{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  color: #eee;
+  border: 1px solid #333;
+  background: #222;
+  padding: 10px;
+  font-size: 17px;
+  resize: none;
+}
+.textarea textarea:focus{
+  border-color: #444;
+}
+form .btn{
+  height: 45px;
+  width: 100%;
+  margin: 15px 0;
+}
+form .btn button{
+  height: 100%;
+  width: 100%;
+  border: 1px solid #444;
+  outline: none;
+  background: #222;
+  color: #999;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+form .btn button:hover{
+  background: #1b1b1b;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  section {
+    flex-direction: column;
+  }
+  div.textSection-container {
+    flex-direction: column;
+  }
+}
