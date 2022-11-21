@@ -101,11 +101,11 @@ div.textSection-container .opposite p {
     flex-direction: column;
   }
   footer{
-    margin-top: 50%;
+    margin-top: 100%;
   }
 }
 
-@media (max-width: 700px) {
+@media screen and (max-width: 700px) {
   .img1{
     flex-direction: column;
   }
@@ -118,5 +118,5 @@ div.textSection-container .opposite p {
 }
 
 footer{
-  margin-top: 20%;
+  margin-top: 200%;
 }
