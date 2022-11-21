@@ -23,6 +23,9 @@ h2 {
   text-align: center;
   margin: auto;
   border: none;
+  color:white;
+  font-size: 6vh;
+  font-family: "Katibeh";
 }
 
 .img1 {
@@ -36,10 +39,6 @@ h1 {
   text-align: center;
   font-family: Dancing Script, sans-serif;
   font-size: 50px;
-}
-h2 {
-  color:white;
-  font-size: 6vh;
 }
 
 section {
