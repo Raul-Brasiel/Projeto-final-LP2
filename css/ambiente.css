@@ -97,3 +97,7 @@ div.textSection-container #img {
     flex-direction: column;
   }
 }
+
+footer{
+ margin-top: 200%; 
+}
