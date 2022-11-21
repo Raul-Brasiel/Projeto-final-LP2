@@ -109,7 +109,7 @@ footer{
     position: absolute;
     right: 0;
     left: 0;
-    margin-top: 100%;
+    margin-top: 160%;
 }
 .container-footer{
     max-width: 1400px;
@@ -182,20 +182,37 @@ footer{
     color: white;
 }
 
+#botoesMenu{
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
 /* Responsivo */
-@media (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .footer-col{
         width: 50%;
-
-    }
-}
-@media (max-width:600px) {
-    .footer-col{
-        width: 100%;
     }
     footer{
-        margin-top: 25%;
+      margin-top: 280%;
     }
+    body{
+      margin-top: 15%;
+    }
+    #botoesMenu{
+      justify-content: center;
+    }
+    #menu{
+      position: absolute;
+    }
+
+}
+@media screen and (max-width: 750px){
+  .footer-col{
+    width: 100%;
+}
+footer{
+    margin-top: 500%;
+}
 }
 
 #linha-footer{
