@@ -385,7 +385,7 @@ footer{
   position: absolute;
   right: 0;
   left: 0;
-  margin-top: 90%;
+  margin-top: 80%;
 }
 .footer{
   max-width: 1400px;
@@ -473,7 +473,7 @@ footer{
       width: 100%;
   }
   footer{
-      margin-top: 290%;
+      margin-top: 270%;
   }
 }
 
