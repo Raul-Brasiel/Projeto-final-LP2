@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Katibeh&display=swap');
+
+
+h1{
+    font-family: Dancing Script, sans-serif;
+    text-align: center;
+    color: #DEB887;
+    font-size: 50px;
+    border: 10px;
+}
+
+body{
+    background-color: black;
+}
+
+.paragrafo{
+    color: white;
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    border: 10px;
+    text-align: justify;
+    padding: 0 20px;
+    margin-top: 2%;
+}
+
+h2{
+    font-family:  Katibeh, sans-serif;
+    color:#DEB887;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 96px;
+    letter-spacing: 0em;
+    text-align: left;
+    height: 31px;
+    width: 848px;
+    left: 54px;
+    top: 1363px;
+    border-radius: nullpx;
+    padding: 0 20px;
+    margin-bottom: 2%;
+}
+
+h3{
+    font-family:  Katibeh, sans-serif;
+    color:#DEB887;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 96px;
+    letter-spacing: 0em;
+    text-align: left;
+    height: 31px;
+    width: 848px;
+    left: 54px;
+    border-radius: nullpx;
+    padding: 0 20px;
+    margin-bottom: 3%;
+}
+
+div#p2{
+    color: white;
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    text-align: justified;
+    border: 10px;
+
+}
+
+div#h7{
+    font-family:  Katibeh, sans-serif;
+    color:#DEB887;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 96px;
+    letter-spacing: 0em;
+    text-align: left;
+    width: 848px;
+    border-radius: nullpx;
+    padding: 0 20px;
+    padding-top: 50px;
+}
+
+@media screen and (max-width: 900px){
+    h2{
+        margin-bottom: 30px;
+    }
+    h3{
+        margin-bottom: 50px;
+    }
+}
+@media screen and (max-width: 600px){
+    h1{
+        padding-bottom: 50px;
+    }
+    h2{
+        font-size: 35px;
+        font-weight: 100;
+        width: 390px;
+        word-break: normal;
+    }
+    h3{
+        width: 380px;
+        word-break: normal;
+    }
+    div#h7{
+        width: 390px;
+        line-height: 40px;
+    }
+}
