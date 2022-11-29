@@ -2,10 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Katibeh&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Katibeh&display=swap');
-
 body {
   margin: 0;
   background-color: #deb887;
@@ -24,6 +20,7 @@ p {
   height: 200%;
   margin: 0;
   padding: 0;
+  max-width: 1000px;
 }
 h2 {
   text-align: center;
